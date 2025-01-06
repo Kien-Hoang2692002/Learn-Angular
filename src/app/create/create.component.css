@@ -1,0 +1,37 @@
+.wrapper-cart{
+    background-image: linear-gradient(to right, #d73bb3, #8029fc);
+    height: calc(100vh - 70px);
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.form-control label {
+    font-weight: 600;
+    color: #d73bb3;
+}
+
+.form-control input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.8rem 0 0.8rem 0;
+    border-radius: 4px;
+    background-color: #f0ecef;
+}
+
+.form-control .btn-navigation {
+    background-image: linear-gradient(to right, #d73bb3, #8029fc);
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.4rem;
+}
+  

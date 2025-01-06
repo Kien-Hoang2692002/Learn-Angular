@@ -32,8 +32,8 @@ export class ProductItemComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['products'].currentValue);
-    console.log(changes['products'].previousValue);
+    // console.log(changes['products'].currentValue);
+    // console.log(changes['products'].previousValue);
   }
 
   ngOnDestroy(): void {

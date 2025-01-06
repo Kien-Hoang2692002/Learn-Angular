@@ -4,3 +4,10 @@ export type ProductItem = {
     price: number;
     image: string;
 }
+
+export type BlogItem = {
+    id?: number;
+    title?: string;
+    body?: number;
+    author?: string;
+}
