@@ -3,6 +3,7 @@ export type ProductItem = {
     name: string;
     price: number;
     image: string;
+    rating?: number;
 }
 
 export type BlogItem = {

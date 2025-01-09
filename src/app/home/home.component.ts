@@ -7,6 +7,8 @@ import { BlogService } from '../../services/BlogService';
 import { Subscription } from 'rxjs';
 import { map, filter} from 'rxjs/operators';
 import { OHSwitchModule } from '@onehealth/ui/switch';
+import { HisWarningModule } from '@onehealth/ui/his-warning';
+
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,8 @@ import { OHSwitchModule } from '@onehealth/ui/switch';
   imports: [
     NgIf,
     ProductItemComponent,
-    OHSwitchModule
+    OHSwitchModule,
+    HisWarningModule
 ],
   templateUrl:  './home.component.html',
   styleUrls: ['./home.component.css']
@@ -41,9 +44,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     {id: 4, name: 'mlb f3', price: 4000000, image: this.image_url},
   ]
 
+  title
   constructor( private BlogService: BlogService) {
     console.log('Initalize Component');
     this.getBlogApi = new Subscription;
+    this.title = 'Đang có ca cấp cứu huy động toàn bệnh viện. Yêu cầu hỗ trợ khẩn cấp các bác sỹ tại phòng 102';
   }
 
 

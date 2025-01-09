@@ -12,7 +12,9 @@
         />
         <h3>Name product: {{ productItem.name }}</h3>
         <h4>Price product: {{ productItem.price }}</h4>
-        <h3></h3>
+        <oh-rate
+            [formControl]="ratingControl" [ohTooltips]="tooltips">
+        </oh-rate>
     </div>
 
 </div>

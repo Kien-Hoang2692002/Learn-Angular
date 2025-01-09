@@ -7,13 +7,13 @@
             <app-product-item [products]="products" (dataEvent)="handleDelete($event)"></app-product-item>
           </div>
 
-        
-
           <!-- <button (click)="handleChangeVisible()">
                 Bật/Tắt
           </button> -->
 
         
 </div>
+
+<his-warning [hisWarning]="true" [hisTitle]="title" [hisTime]=20 [hisCount]=20></his-warning>
 
 
