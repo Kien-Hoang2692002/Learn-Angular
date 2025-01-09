@@ -22,10 +22,14 @@ export const serverRoutes: ServerRoute[] = [
   },
   {
     path: 'create',
-    renderMode: RenderMode.Client,  // Dùng Client-side Rendering cho route này
+    renderMode: RenderMode.Client, 
+  },
+  {
+    path: 'login',
+    renderMode: RenderMode.Client, 
   },
   {
     path: '**',
-    renderMode: RenderMode.Prerender // Mặc định fallback sang Client-side Rendering cho các route không xác định
+    renderMode: RenderMode.Prerender 
   }
 ];

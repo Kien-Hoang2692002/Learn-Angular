@@ -24,6 +24,9 @@ import { HeaderLayoutComponent } from './shared/header-layout/header-layout.comp
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   // title = {
   //   name: 'Test',
   //   old: 2024,

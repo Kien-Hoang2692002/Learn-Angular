@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/BlogService';
 import { ProductItem } from '../shared/types/product-item';
+import { OHImageModule } from '@onehealth/ui/image';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
   imports: [ 
+    OHImageModule
   ],
   templateUrl:  './detail.component.html',
   styleUrls: ['./detail.component.css']

@@ -2,7 +2,14 @@
     <h1>Detail Product {{ id }}</h1>
 
     <div style="padding: 0 3rem; color: #fff;">
-        <img src="{{productItem.image}}" alt="" width="50%" height="auto">
+        <img
+            oh-image
+            width="300px"
+            height="300px"
+            ohSrc="{{productItem.image}}"
+            alt=""
+            images
+        />
         <h3>Name product: {{ productItem.name }}</h3>
         <h4>Price product: {{ productItem.price }}</h4>
         <h3></h3>

@@ -1,4 +1,5 @@
-<div class="group-header">
+
+<div class="group-header" *ngIf="isLoggedIn">
     <div class="header-logo">
         <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,14 +51,17 @@
         <div class="btn-navigation">
           <a routerLink="/create" href="">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2501px-Shopping_cart_icon.svg.png" width="20px" height="20px"> 
-          </a>
-            
+          </a> 
         </div>
         <div class="btn-navigation">
             <img src="https://www.svgrepo.com/show/171081/store.svg" width="20px" height="20px">
-            
+        </div>
+
+        <div class="btn-navigation">
+          <a (click)="logout()">Logout</a>
         </div>
 
     </div>
-    
 </div>
+
+<his-header *ngIf="!isLoggedIn" [hisButton]="onLogin" [isDetail]="true" routerLink="/login"></his-header>

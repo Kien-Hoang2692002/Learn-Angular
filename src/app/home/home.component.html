@@ -2,13 +2,16 @@
           <h1>Shopping Cart</h1>
 
 
+          <oh-switch (click)="handleChangeVisible()"></oh-switch>
           <div *ngIf="isVisible">
             <app-product-item [products]="products" (dataEvent)="handleDelete($event)"></app-product-item>
           </div>
 
-          <button (click)="handleChangeVisible()">
+        
+
+          <!-- <button (click)="handleChangeVisible()">
                 Bật/Tắt
-          </button>
+          </button> -->
 
         
 </div>

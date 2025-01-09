@@ -12,8 +12,8 @@
         <div class="form-control">
             <label for="name">Name</label>
             <div>
-                <input type="text" id="name" formControlName="name" />
-            </div>
+                <!-- <input type="text" id="name" formControlName="name" /> -->
+                <input oh-input  placeholder="Enter your name" formControlName="name" type="text" />
             <div *ngIf="name?.dirty || name?.touched">
                 <div style="color: red;" *ngIf="name?.hasError('required')">
                     Name is required.
@@ -23,7 +23,9 @@
         <div class="form-control">
             <label for="price">Price</label>
             <div>
-                <input type="text" id="price" formControlName="price" />
+                <oh-input-group ohSuffix="RMB" ohPrefix="￥">
+                    <input type="text" id="price" formControlName="price"  placeholder="Enter price" />
+                </oh-input-group>
             </div>
             <div *ngIf="price?.dirty || price?.touched">
                 <div style="color: red;" *ngIf="price?.hasError('required')">
@@ -34,11 +36,11 @@
 
         <div class="form-control">
             <div 
-                class="btn-navigation"
                 (click)="handleAddCart()"
             >
-              Add to cart
+                <button oh-button ohType="primary">Add to cart</button>
             </div>
         </div> 
+
     </div>
 </div>

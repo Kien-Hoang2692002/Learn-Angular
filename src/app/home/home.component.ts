@@ -6,13 +6,15 @@ import { HttpClient } from '@angular/common/http';
 import { BlogService } from '../../services/BlogService';
 import { Subscription } from 'rxjs';
 import { map, filter} from 'rxjs/operators';
+import { OHSwitchModule } from '@onehealth/ui/switch';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     NgIf,
-    ProductItemComponent
+    ProductItemComponent,
+    OHSwitchModule
 ],
   templateUrl:  './home.component.html',
   styleUrls: ['./home.component.css']

@@ -4,10 +4,12 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { NgIf } from '@angular/common';
 import { BlogItem } from '../shared/types/product-item';
 import { Router } from '@angular/router';
+import { OHButtonModule } from '@onehealth/ui/button';
+import { OHInputModule } from '@onehealth/ui/input';
 
 @Component({
   selector: 'app-create',
-  imports: [ReactiveFormsModule, NgIf],
+  imports: [ReactiveFormsModule, NgIf, OHButtonModule, OHInputModule],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })
@@ -17,6 +19,8 @@ export class CreateComponent {
     name: new FormControl('', Validators.required),
     price: new FormControl('',  Validators.required),
   });
+
+  
 
   constructor( private blogService: BlogService, private router:Router) {
   }
@@ -28,6 +32,8 @@ export class CreateComponent {
   get price() {
     return this.product.get('price');
   }
+
+  
   handleAddCart(){
     if(this.name?.hasError('required') || this.price?.hasError('required')){
       return ;
@@ -48,6 +54,7 @@ export class CreateComponent {
 
   }
 
-
-
+  
 }
+
+
