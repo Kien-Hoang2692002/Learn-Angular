@@ -48,11 +48,13 @@
       </svg>
     </div>
     <div class="group-navigation">
+
         <div class="btn-navigation">
           <a routerLink="/create" href="">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2501px-Shopping_cart_icon.svg.png" width="20px" height="20px"> 
           </a> 
         </div>
+
         <div class="btn-navigation">
             <img src="https://www.svgrepo.com/show/171081/store.svg" width="20px" height="20px">
         </div>
@@ -61,7 +63,48 @@
           <a (click)="logout()">Logout</a>
         </div>
 
+        <div class="btn-navigation">
+          <a oh-dropdown [ohDropdownMenu]="menu">
+            Hover me
+            <span oh-icon ohType="down"></span>
+          </a>
+          <oh-dropdown-menu #menu='ohDropdownMenu'>
+            <ul oh-menu ohSelectable>
+              <li oh-menu-item>1st menu item</li>
+              <li oh-menu-item>2nd menu item</li>
+              <li oh-menu-item>3rd menu item</li>
+              <li oh-menu-item ohDanger>4th danger item</li>
+            </ul>
+          </oh-dropdown-menu>
+        </div>
     </div>
 </div>
 
 <his-header *ngIf="!isLoggedIn" [hisButton]="onLogin" [isDetail]="true" routerLink="/login"></his-header>
+
+<!-- <li oh-submenu ohPlacement="topRight" ohTitle="topRight">
+  <ul>
+    <li oh-menu-group ohTitle="Item 1">
+      <ul>
+        <li oh-menu-item>Option 1</li>
+        <li oh-menu-item>Option 2</li>
+      </ul>
+    </li>
+    <li oh-menu-group ohTitle="Item 2">
+      <ul>
+        <li oh-menu-item>Option 3</li>
+        <li oh-menu-item>Option 4</li>
+        <li oh-submenu ohTitle="Sub Menu">
+          <ul>
+            <li oh-menu-item ohDisabled>Option 5</li>
+            <li oh-menu-item>Option 6</li>
+          </ul>
+        </li>
+        <li oh-submenu ohDisabled ohTitle="Disabled Sub Menu">
+          <ul>
+            <li oh-menu-item>Option 5</li>
+            <li oh-menu-item>Option 6</li>
+          </ul>
+        </li>
+      </ul>
+</li> -->

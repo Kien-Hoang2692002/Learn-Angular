@@ -15,7 +15,7 @@ export class AuthService {
         return this.http.post<any>(`https://ninedev-api.vercel.app/account/login`, data);
     }
 
-     // Hàm để lưu token vào localStorage nếu đang ở client-side
+  // Hàm để lưu token vào localStorage nếu đang ở client-side
   storeToken(token: string): void {
     if (typeof window !== 'undefined' && window.localStorage) {
       localStorage.setItem('authToken', token);
