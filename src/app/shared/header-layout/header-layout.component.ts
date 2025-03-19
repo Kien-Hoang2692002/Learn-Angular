@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/AuthService';
-import { HisHeaderModule } from '@onehealth/ui/his-header';
 import { NgIf } from '@angular/common';
-import { OHDropDownModule } from '@onehealth/ui/dropdown';
 
 @Component({
   selector: 'app-header-layout',
   standalone: true,
-  imports: [RouterLink, HisHeaderModule, NgIf, OHDropDownModule],
+  imports: [RouterLink, NgIf],
   templateUrl: './header-layout.component.html',
   styleUrl: './header-layout.component.css'
 })

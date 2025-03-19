@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { OHFormModule } from '@onehealth/ui/form';
-import { OHInputModule } from '@onehealth/ui/input';
-import { OHButtonModule } from '@onehealth/ui/button';
 import { AuthService } from '../../services/AuthService';
 import { Router } from '@angular/router';
 import { AuthUser } from '../shared/types/auth';
@@ -13,9 +10,6 @@ import { AuthUser } from '../shared/types/auth';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    OHFormModule,
-    OHInputModule,
-    OHButtonModule
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'] // Sửa đúng 'styleUrls'

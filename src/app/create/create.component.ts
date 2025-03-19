@@ -4,12 +4,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { NgIf } from '@angular/common';
 import { BlogItem } from '../shared/types/product-item';
 import { Router } from '@angular/router';
-import { OHButtonModule } from '@onehealth/ui/button';
-import { OHInputModule } from '@onehealth/ui/input';
 
 @Component({
   selector: 'app-create',
-  imports: [ReactiveFormsModule, NgIf, OHButtonModule, OHInputModule],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })

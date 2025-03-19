@@ -2,16 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/BlogService';
 import { ProductItem } from '../shared/types/product-item';
-import { OHImageModule } from '@onehealth/ui/image';
-import { OHRateModule } from '@onehealth/ui/rate';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
   imports: [ 
-    OHImageModule,
-    OHRateModule,
     ReactiveFormsModule
   ],
   templateUrl:  './detail.component.html',

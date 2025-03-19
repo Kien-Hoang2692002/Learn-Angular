@@ -1,13 +1,10 @@
-import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { ProductItem } from '../shared/types/product-item';
 import { ProductItemComponent } from "../shared/product-item/product-item.component";
-import { HttpClient } from '@angular/common/http';
 import { BlogService } from '../../services/BlogService';
 import { Subscription } from 'rxjs';
-import { map, filter} from 'rxjs/operators';
-import { OHSwitchModule } from '@onehealth/ui/switch';
-import { HisWarningModule } from '@onehealth/ui/his-warning';
+import { map} from 'rxjs/operators';
 
 
 @Component({
@@ -16,8 +13,6 @@ import { HisWarningModule } from '@onehealth/ui/his-warning';
   imports: [
     NgIf,
     ProductItemComponent,
-    OHSwitchModule,
-    HisWarningModule
 ],
   templateUrl:  './home.component.html',
   styleUrls: ['./home.component.css']

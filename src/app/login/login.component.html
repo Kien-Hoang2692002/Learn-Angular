@@ -1,30 +1,18 @@
 <form oh-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-    <oh-form-item>
-      <oh-form-control ohErrorTip="Please input your username!">
-        <oh-input-group>
-          <input type="text" oh-input formControlName="username" placeholder="Username" />
-        </oh-input-group>
-      </oh-form-control>
-    </oh-form-item>
-    <oh-form-item>
-      <oh-form-control ohErrorTip="Please input your password!">
-        <oh-input-group>
-          <input type="password" oh-input formControlName="password" placeholder="Password" />
-        </oh-input-group>
-      </oh-form-control>
-    </oh-form-item>
+        <input type="text" oh-input formControlName="username" placeholder="Username" />
+        <input type="password" oh-input formControlName="password" placeholder="Password" />
     <div oh-row class="login-form-margin">
-        <div oh-col [ohSpan]="12">
+        <div oh-col >
             <label>
               <input type="checkbox" formControlName="remember" />
               <span>Remember me</span>
             </label>
           </div>
-      <div oh-col [ohSpan]="12">
+      <div oh-col>
         <a class="login-form-forgot">Forgot password</a>
       </div>
     </div>
-    <button oh-button class="login-form-button login-form-margin" [ohType]="'primary'">
+    <button oh-button class="login-form-button login-form-margin">
       Log in
     </button>
     Or

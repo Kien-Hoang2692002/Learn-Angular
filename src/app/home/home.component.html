@@ -2,7 +2,7 @@
           <h1>Shopping Cart</h1>
 
 
-          <oh-switch (click)="handleChangeVisible()"></oh-switch>
+          <!-- <oh-switch (click)="handleChangeVisible()"></oh-switch> -->
           <div *ngIf="isVisible">
             <app-product-item [products]="products" (dataEvent)="handleDelete($event)"></app-product-item>
           </div>
@@ -14,6 +14,6 @@
         
 </div>
 
-<his-warning [hisWarning]="true" [hisTitle]="title" [hisTime]=20 [hisCount]=20></his-warning>
+<!-- <his-warning [hisWarning]="true" [hisTitle]="title" [hisTime]=20 [hisCount]=20></his-warning> -->
 
 

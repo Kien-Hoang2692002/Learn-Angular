@@ -23,9 +23,7 @@
         <div class="form-control">
             <label for="price">Price</label>
             <div>
-                <oh-input-group ohSuffix="RMB" ohPrefix="￥">
-                    <input type="text" id="price" formControlName="price"  placeholder="Enter price" />
-                </oh-input-group>
+                <input type="text" id="price" formControlName="price"  placeholder="Enter price" />
             </div>
             <div *ngIf="price?.dirty || price?.touched">
                 <div style="color: red;" *ngIf="price?.hasError('required')">
