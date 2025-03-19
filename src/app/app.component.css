@@ -1,1 +1,61 @@
+/* Lớp chứa hiệu ứng hoa anh đào rơi */
+.snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Không ảnh hưởng đến tương tác */
+  z-index: 9999; /* Đặt trên cùng */
+  overflow: hidden;
+}
 
+/* Tạo các cánh hoa anh đào */
+.snowfall::before,
+.snowfall::after,
+.snowfall span {
+  content: '';
+  position: absolute;
+  width: 10px; /* Chiều rộng cánh hoa */
+  height: 6px; /* Chiều cao nhỏ hơn để giống cánh hoa */
+  background: #ff6b6b; /* Màu hồng đặc trưng của hoa anh đào */
+  border-radius: 50% 20% 50% 20%; /* Bo tròn không đều để giống cánh hoa */
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); /* Ánh sáng nhẹ */
+  animation: cherryBlossomFall 8s linear infinite; /* Thời gian rơi nhanh hơn một chút */
+  transform-origin: center;
+}
+
+/* Tăng số lượng cánh hoa ngẫu nhiên */
+.snowfall::before { left: 5%; animation-delay: 0s; }
+.snowfall::after { left: 15%; animation-delay: 1s; }
+.snowfall span:nth-child(1) { left: 25%; animation-delay: 2s; }
+.snowfall span:nth-child(2) { left: 35%; animation-delay: 3s; }
+.snowfall span:nth-child(3) { left: 45%; animation-delay: 4s; }
+.snowfall span:nth-child(4) { left: 55%; animation-delay: 5s; }
+.snowfall span:nth-child(5) { left: 65%; animation-delay: 6s; }
+.snowfall span:nth-child(6) { left: 75%; animation-delay: 7s; }
+.snowfall span:nth-child(7) { left: 85%; animation-delay: 0.5s; }
+.snowfall span:nth-child(8) { left: 95%; animation-delay: 1.5s; }
+.snowfall span:nth-child(9) { left: 10%; animation-delay: 2.5s; }
+.snowfall span:nth-child(10) { left: 20%; animation-delay: 3.5s; }
+
+/* Keyframe cho hiệu ứng rơi */
+@keyframes cherryBlossomFall {
+  0% {
+    opacity: 0.9;
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(0vh) rotate(180deg); /* Xoay cánh hoa khi rơi */
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(100vh) rotate(360deg); /* Tiếp tục xoay */
+  }
+}
+
+/* Đảm bảo các span hiển thị */
+.snowfall span {
+  display: block;
+}

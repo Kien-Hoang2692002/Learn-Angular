@@ -42,7 +42,7 @@ export class LoginComponent {
         .subscribe(({data}:any) => {
           const token = data.id;
           if (token) {
-            this.authService.storeToken(token);
+            // this.authService.storeToken(token);
             this.router.navigate(['/']);
             console.log('Đăng nhập thành công!');
           } else {

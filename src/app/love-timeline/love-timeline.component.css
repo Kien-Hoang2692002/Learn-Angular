@@ -1,0 +1,201 @@
+.container {
+  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMY7s4D3dCHkBP1H1vbaceIZN2EEC7HNKPug&s") center center; */
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(45deg, #e6e0fa, #ffd6e8);
+}
+
+/* Căn chỉnh container và thêm nền nhẹ */
+.timeline-container {
+    margin-top: 0; 
+    max-width: 860px; /*Tăng nhẹ để rộng rãi hơn */
+    margin: 10px auto;
+    padding: 30px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent), linear-gradient(135deg, #f8ddeb 0%, #e6e0fa 50%, #ffd6e8 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Tinh chỉnh timeline */
+  .timeline {
+    position: relative;
+    padding-left: 50px; /* Tăng padding cho thoáng */
+  }
+  
+  /* Làm milestone nổi bật hơn */
+  .milestone {
+    position: relative;
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-in; /* Thêm hiệu ứng xuất hiện nhẹ */
+  }
+  
+  /* Dot đẹp hơn với hiệu ứng */
+  .timeline-dot {
+    position: absolute;
+    left: -35px;
+    top: 12px;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8787); /* Gradient cho dot */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .milestone:hover .timeline-dot {
+    transform: scale(1.2); /* Phóng to dot khi hover */
+  }
+  
+  /* Card milestone mềm mại và nổi bật */
+  .milestone-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #ff6b6b; /* Thêm viền trái màu hồng */
+  }
+  
+  .milestone-content:hover {
+    transform: translateY(-5px); /* Nâng lên nhẹ khi hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Tinh chỉnh typography */
+  .date {
+    font-size: 16px;
+    color: #ff6b6b; 
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  
+  h3 {
+    margin: 8px 0;
+    color: #ff6b6b;
+    font-family: 'Georgia', serif; /* Font chữ mềm mại */
+    font-size: 20px;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #444;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+  }
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép ảnh xuống dòng nếu quá nhiều */
+    gap: 10px; /* Khoảng cách giữa các ảnh */
+    margin-top: 15px;
+  }
+  
+  /* Ảnh linh hoạt và đẹp hơn */
+.milestone-image {
+  width: 100%; /* Chiếm toàn chiều rộng của container cha */
+  max-width: 300px; /* Giới hạn tối đa để không quá to */
+  height: auto; /* Giữ tỷ lệ ảnh tự nhiên */
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+/* Hiệu ứng hover */
+.milestone-image:hover {
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tăng shadow cho nổi bật */
+}
+
+/* Tùy chỉnh kích cỡ khác nhau */
+.milestone-image.small {
+  max-width: 150px; /* Kích cỡ nhỏ */
+}
+
+.milestone-image.medium {
+  max-width: 200px; /* Kích cỡ trung */
+}
+
+.milestone-image.large {
+  max-width: 400px; /* Kích cỡ lớn */
+}
+  /* Dòng nối giữa các dot */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #ff6b6b, #ff8787); /* Gradient cho dòng */
+  }
+  
+  /* Keyframe cho hiệu ứng fadeIn */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scroll-btn {
+    position: fixed;
+    bottom: 30px; /* Tăng nhẹ để thoáng hơn */
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8787); /* Gradient hồng nhạt */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Đổi thành hình tròn cho mềm mại */
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4); /* Shadow hồng nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    font-size: 24px; /* Tăng kích thước mũi tên */
+    z-index: 1000; /* Đảm bảo nằm trên các hiệu ứng như hoa anh đào */
+  }
+  
+  /* Hiệu ứng hover */
+  .scroll-btn:hover {
+    transform: scale(1.1) translateY(-5px); /* Phóng to và nâng lên */
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6); /* Tăng shadow */
+    background: linear-gradient(45deg, #ff8787, #ff6b6b); /* Đảo gradient */
+  }
+  
+  /* Hiệu ứng active (khi nhấn) */
+  .scroll-btn:active {
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+  }
+  
+  /* Mũi tên đẹp hơn */
+  .scroll-btn::before {
+    content: '\2191'; /* Unicode cho mũi tên lên */
+    display: block;
+    transform: rotate(-45deg); /* Xoay lại để mũi tên thẳng */
+    font-weight: bold;
+  }
+  
+  /* Responsive cho mobile */
+  @media (max-width: 600px) {
+    .scroll-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  

@@ -1,0 +1,28 @@
+<div class="container"> 
+  <div class="timeline-container">
+    <div class="timeline" [@timelineAnimation]="milestones.length">
+      <div *ngFor="let milestone of milestones" class="milestone">
+        <div class="timeline-dot"></div>
+        <div class="milestone-content">
+          <p class="date">
+            {{ milestone.date ? ('Ngày ' + (milestone.date | date:'d') + ' tháng ' + (milestone.date | date:'M') + ' năm ' + (milestone.date | date:'yyyy')) : 'Ngày không xác định' }}
+          </p>
+          <h3>{{ milestone.title }}</h3>
+          <p>{{ milestone.description }}</p>
+          <div class="image-gallery">
+            <img
+              *ngFor="let imageUrl of milestone.imageUrls"
+              [src]="imageUrl"
+              [class.small]="milestone.size === 'small'"
+              [class.medium]="milestone.size === 'medium'"
+              [class.large]="milestone.size === 'large'"
+              alt="{{ milestone.title }}"
+              class="milestone-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="scroll-btn" (click)="scrollToTop()"></button>
+  </div>
+</div>

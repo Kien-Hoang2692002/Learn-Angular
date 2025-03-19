@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HeaderLayoutComponent } from './shared/header-layout/header-layout.component';
 
+
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     RouterOutlet, 
-    HeaderLayoutComponent, 
     FormsModule,
    ],
   // template: `
